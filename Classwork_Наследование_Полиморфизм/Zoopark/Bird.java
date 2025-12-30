@@ -1,0 +1,28 @@
+public class Bird extends Animal {
+    private boolean canFly;
+
+    public Bird() {
+        this("Неизвестная птица", 0, true);
+    }
+
+    public Bird(String name, int age, boolean canFly) {
+        super(name, age);
+        this.canFly = canFly;
+    }
+
+    @Override
+    public void makeSound() {
+        System.out.println("Чик-чирик!");
+    }
+
+    public void fly() {
+        if (canFly) {
+            System.out.println(getName() + " летит в небе");
+        } else {
+            System.out.println(getName() + " не умеет летать");
+        }
+    }
+
+    public boolean canFly() { return canFly; }
+    public void setCanFly(boolean canFly) { this.canFly = canFly; }
+}
